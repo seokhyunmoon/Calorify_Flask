@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+</head>
+<body>
+    <h1>감지 결과</h1>
+    
+    <h2>감지된 객체:</h2>
+    <ul>
+    {% for obj in objects %}
+        <li>{{ obj.class }}: {{ obj.confidence|round(2) }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>감지된 음식 클래스:</h2>
+    <ul>
+    {% for food in food_classes %}
+        <li>{{ food }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>처리된 이미지:</h2>
+    <img src="data:image/jpeg;base64,{{ image }}" alt="Processed Image">
+
+    <br>
+    <a href="/">다시 시도</a>
+</body>
+</html>
