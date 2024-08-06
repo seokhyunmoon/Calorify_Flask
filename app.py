@@ -82,7 +82,7 @@ import csv
 app = Flask(__name__)
 CORS(app)  # CORS 설정 추가
 
-model = YOLO('yolov8n.pt')  # 또는 여러분이 학습시킨 모델 경로
+model = YOLO('best.pt')  # 또는 여러분이 학습시킨 모델 경로
 
 # 영어 이름을 한국어 이름으로 변환하는 딕셔너리 생성
 food_name_mapping = {}
